@@ -2,6 +2,8 @@
 
 import React from 'react-native';
 
+import styles from '../../styles/application';
+
 let {
   View,
   Text
@@ -17,13 +19,13 @@ class Student extends React.Component {
     const { house, pet } = this.props.data;
 
     return (
-      <View>
-        <Text>{this.studentName()}</Text>
-        <View>
-          <Text>House:</Text>
+      <View style={styles.student}>
+        <Text style={styles.studentName}>{this.studentName()}</Text>
+        <View style={styles.studentInfo}>
+          <Text>House: </Text>
           <Text>{house}</Text>
         </View>
-        <View>
+        <View style={styles.studentInfo}>
           <Text>Pet Companion: </Text>
           <Text>{pet}</Text>
         </View>

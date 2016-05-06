@@ -6,6 +6,8 @@ import Student from '../components/participants/Student';
 import ParticipantsActionCreator from '../action_creators/ParticipantsActionCreator';
 import { connect } from 'react-redux';
 
+import styles from '../styles/application';
+
 let {
   View,
   ScrollView
