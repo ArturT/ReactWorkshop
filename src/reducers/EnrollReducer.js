@@ -20,6 +20,15 @@ let EnrollReducer = (state = initialState, action) => {
     return Object.assign({}, state, {
       isPreferencesOpen: !state.isPreferencesOpen
     })
+  case ActionTypes.INPUT_CHANGED:
+    const inputType = action.inputType;
+    const inputValue = action.inputValue;
+    const form = Object.assign({}, state.form, {
+      [inputType]: inputValue
+    });
+    return Object.assign({}, state, {
+      form: form
+    })
   case ActionTypes.STUDENT_CREATION_FAILED:
     return Object.assign({}, state, {
       errors: action.errors
