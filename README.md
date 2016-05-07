@@ -8,6 +8,16 @@
 4. `brew install watchman`
 5. `npm install`
 
+Tip: npm 3.7.3. node 5.9.0
+
+    $ nvm alias default 5.9.0
+
+    $ npm install && npm run fixFbjsConflicts
+
+Remember to run brew update && brew install watchman (ensure you have 4.5.0 watchman version).
+
+If you are using iterm2 then ensure the terminal (system one) has set correct node version 5.9.0 because Xcode use system terminal.
+
 #### Android setup (optional)
 
 1. download [Android jdk](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
