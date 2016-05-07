@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "npm run fixBabel",
-    "fixBabel": "find node_modules -type f -name .babelrc | grep -v /react-native/ | xargs rm"
+    "fixBabel": "find node_modules -type f -name .babelrc | grep -v /react-native/ | xargs rm",
+    "fixFbjsConflicts": "rm -rf ./node_modules/fbemitter/node_modules/fbjs && rm -fr $TMPDIR/react-* && watchman watch-del-all"
   },
   "dependencies": {
     "react-native": "0.19.0",
